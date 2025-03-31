@@ -1,0 +1,90 @@
+@import url("https://use.typekit.net/irx0wvb.css");
+:root {
+	--primary-color: #1d1b1c;
+	--secondary-color: #fcfbfc;
+	--dark-khaki-color: #bdb76b;
+	--darker-khaki-color: #9b943d; /* Darker version */
+	--light-third-color: #ffa64d; /* Lighter version */
+
+	--fourth-color: #3a3a3a;
+
+	/* padding */
+	--section-padding: 2rem;
+	--section-padding-lg: 4rem;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*----------------------*\
+¦-----ELEMENT-STYLES-----¦
+\*----------------------*/
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Montserrat", sans-serif;
+}
+
+p {
+	font-family: "Montserrat", sans-serif;
+}
+
+a,
+img,
+span,
+input,
+button,
+i {
+	display: block;
+}
+
+button,
+input {
+	background: none;
+	border: none;
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input {
+	width: 100%;
+}
+
+i {
+	pointer-events: none;
+}
+
+img {
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+	font-family: "ohno-softie-variable", sans-serif;
+}
+
+body {
+	background-color: var(--primary-color);
+	color: var(--purple-navy);
+	font-size: 1.6rem;
+}
+
+h2 {
+	font-weight: 800;
+}
