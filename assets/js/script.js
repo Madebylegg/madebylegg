@@ -144,5 +144,3 @@ document.querySelector('a[href="#about"]').addEventListener('click', function(e)
   
   
   
-  
-      
