@@ -82,3 +82,67 @@ function callPhoneNumber(phoneNumber) {
   // Open the phone dialer with the specified phone number.
   window.location.href = 'tel:' + phoneNumber;
 }
+
+
+// SMOOTH SCROLLING
+
+document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    
+    const offset = -200; // Adjust this value to scroll further up
+    const target = document.getElementById('about');
+    
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+  
+  
+  // CAROUSEL
+  document.addEventListener("DOMContentLoaded", function () {
+    const carouselInner = document.querySelector('.testimonial-items');
+    const prevBtn = document.querySelector('.carousel-controls .prev');
+    const nextBtn = document.querySelector('.carousel-controls .next');
+    const testimonialItems = document.querySelectorAll('.testimonial-item');
+    const totalItems = testimonialItems.length;
+    let currentIndex = 0;
+  
+    function updateCarousel() {
+      // Get the width of a single testimonial item including the gap
+      const itemWidth = testimonialItems[0].offsetWidth + 20; // 20px gap
+  
+      // Calculate offset based on index
+      const offset = -currentIndex * itemWidth;
+  
+      // Apply transform
+      carouselInner.style.transform = `translateX(${offset}px)`;
+    }
+  
+    prevBtn.addEventListener('click', function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalItems - 1; // Loop back to last item
+      }
+      updateCarousel();
+    });
+  
+    nextBtn.addEventListener('click', function () {
+      if (currentIndex < totalItems - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Loop back to first item
+      }
+      updateCarousel();
+    });
+  });
+  
+  
+  
+  
+  
+      
