@@ -605,3 +605,25 @@
 	object-fit: cover;
 	border-radius: 12px;
 }
+
+
+.iframe-preview-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: auto; /* Allows scrolling */
+    position: relative;
+    background: white;
+}
+
+/* Zoom out the iframe */
+.iframe-preview.zoomed {
+    width: 120%; /* More than 100% creates the zoom-out effect */
+    height: 120%;
+    transform: scale(0.8); /* Adjust zoom level */
+    transform-origin: top left;
+    border: none;
+    pointer-events: auto;
+}
+
