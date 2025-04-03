@@ -4,6 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
+		<link rel="stylesheet" href="assets/css/animations.css" />
+
 		<link
 			rel="stylesheet"
 			href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
@@ -18,6 +20,7 @@
 		/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 		<title>Document</title>
 	</head>
 
@@ -42,7 +45,9 @@
 					<!-- Book Right -->
 					<a
 						class="book-icon"
-						href="https://getsquire.com/booking/brands/king-of-cuts"
+						href="https://calendly.com/madebylegg/creative-strategy-call"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<div>
 							<i class="fa-regular fa-calendar-plus"></i>
@@ -89,7 +94,7 @@
 							</li>
 
 							<li class="navbar-list-item">
-								<a href="services.html" class="navbar-link" data-navbar-link>
+								<a href="#services" class="navbar-link" data-navbar-link>
 									<i class="fa-sharp fa-solid fa-scissors"></i> Services
 								</a>
 							</li>
@@ -118,21 +123,21 @@
 							</li>
 
 							<li class="navbar-list-item">
-								<a href="#" class="navbar-link" data-navbar-link>
+								<a href="motion_graphics.html" class="navbar-link" data-navbar-link>
 									<i class="fas fa-film"></i>
 									Motion Graphics
 								</a>
 							</li>
 
 							<li class="navbar-list-item">
-								<a href="#" class="navbar-link" data-navbar-link>
+								<a href="video_editing.html" class="navbar-link" data-navbar-link>
 									<i class="fa-solid fa-video"></i>
 									Video Edits
 								</a>
 							</li>
 
 							<li class="navbar-list-item">
-								<a href="#" class="navbar-link" data-navbar-link>
+								<a href="web_dev.html" class="navbar-link" data-navbar-link>
 									<i class="fa-solid fa-code"></i>
 									Web Development
 								</a>
@@ -145,18 +150,23 @@
 
 		<main>
 			<!-- HERO SECTION -->
-			<section class="hero">
+			<section class="hero" id="home">
 				<div class="hero-content">
-					<h1>Transforming Your Ideas into Reality!</h1>
-					<p>
+					<h1 class="hidden from-bottom">Transforming Your Ideas into Reality!</h1>
+					<p class="hidden from-bottom">
 						Creative solutions in branding, motion graphics, and web design.
 					</p>
 					<br />
-					<a href="#services" class="btn-alt">EXPLORE MY WORK</a>
-					<br />
-					<a href="#about" id="about">Learn About Me</a>
+					
+					<div class="hidden from-left">
+						<a href="#services" class="">EXPLORE MY WORK</a>
+						</div>
+						
+						<div class="hidden from-right">
+							<a href="#about" class="btn-alt">Learn About Me</a>
+						</div>
+					
 
-					<!-- <a href="#about" id="about" >Learn About Me</a> -->
 				</div>
 			</section>
 
@@ -166,53 +176,36 @@
 			<div class="splitter splt-1"></div>
 
 			<!-- ABOUT SECTION -->
-			<section class="about">
+			<section class="about" id="about">
 				<div class="container">
-					<h2>Hi, I'm Michael <span class="about-fullstop">.</span></h2>
-					<img
-						src="assets/images/mbl.jpg"
-						alt="Client 1"
-						class="testimonial-img"
-					/>
-
-					<p>
-						I'm a multi-disciplinary creative blending
-						<span class="highlight">web development, design, and AI</span> to
-						craft engaging digital experiences.
-					</p>
-
-					<p>
-						With a strong foundation in
-						<span class="highlight">HTML, CSS, JS and responsive design</span>,
-						I build sleek, user-friendly websites that stand out.
-					</p>
-
-					<p>
-						Beyond code, I bring brands to life with
-						<span class="highlight"
-							>Illustrator, Photoshop, Premiere Pro, and After Effects</span
-						>, creating bold visuals, motion graphics, and dynamic marketing
-						content.
-					</p>
-
-					<p>
-						Whether it’s
-						<span class="highlight">branding, illustration, or video</span>, I
-						transform ideas into high-impact designs.
-					</p>
-
-					<p>
-						I’m also passionate about
-						<span class="highlight">AI and automation</span>, leveraging
-						cutting-edge tech to streamline workflows and push creative
-						boundaries.
-					</p>
-
-					<p>
-						Always evolving, always experimenting<span class="highlight">
-						</span>
-					</p>
-					<p>let’s build something amazing for your buisness or brand!</p>
+					<div class="about-wrapper">
+						<h2 class="hidden from-left">Hi, I'm Michael <span class="about-fullstop">.</span></h2>
+						<img src="assets/images/mbl.jpg" alt="Client 1" class="testimonial-img hidden from-right" />
+						<p class="hidden from-left">
+						  I'm a multi-disciplinary creative blending
+						  <span class="highlight">web development, design, and AI</span> to craft engaging digital experiences.
+						</p>
+						<p class="hidden from-right">
+						  With a strong foundation in
+						  <span class="highlight">HTML, CSS, JS and responsive design</span>, I build sleek, user-friendly websites that stand out.
+						</p>
+						<p class="hidden from-left">
+						  Beyond code, I bring brands to life with
+						  <span class="highlight">Illustrator, Photoshop, Premiere Pro, and After Effects</span>, creating bold visuals, motion graphics, and dynamic marketing content.
+						</p>
+						<p class="hidden from-right">
+						  Whether it’s
+						  <span class="highlight">branding, illustration, or video</span>, I transform ideas into high-impact designs.
+						</p>
+						<p class="hidden from-left">
+						  I’m also passionate about
+						  <span class="highlight">AI and automation</span>, leveraging cutting-edge tech to streamline workflows and push creative boundaries.
+						</p>
+						<p class="hidden from-right">Always evolving, always experimenting</p>
+						<p class="hidden from-left">let’s build something amazing for your buisness or brand!</p>
+						<div class="hidden from-right"><a class="" href="#">Book a call</a></div>
+					  </div>
+					  
 				</div>
 			</section>
 
@@ -221,52 +214,52 @@
 
 			<!-- SERVICES OVERVIEW -->
 			<section class="services" id="services">
-				<h2>Why settle for ordinary when you can be extraordinary?</h2>
+				<h2 class="hidden from-left"> Why settle for ordinary when you can be extraordinary?</h2>
 				<div class="services-grid">
-					<div class="service-item" data-aos="fade-up">
+					<div class="service-item hidden from-bottom">
 						<div class="service-icon">
 							<i class="fas fa-lightbulb"></i>
 						</div>
 						<h3>Branding & Identity</h3>
 						<p>Crafting unique visual identities for businesses.</p>
-						<a href="#">Take a look</a>
-						<a href="#">Book a call</a>
+						<a href="branding.html">Take a look</a>
+						<a href="https://calendly.com/madebylegg/creative-strategy-call">Book a call</a>
 					</div>
-					<div class="service-item" data-aos="fade-up" data-aos-delay="100">
+					<div class="service-item hidden from-bottom">
 						<div class="service-icon">
 							<i class="fas fa-palette"></i>
 						</div>
 						<h3>Illustration</h3>
 						<p>Custom artwork and illustrations for various projects.</p>
-						<a href="#">Take a look</a>
-						<a href="#">Book a call</a>
+						<a href="illustrations.html">Take a look</a>
+						<a href="https://calendly.com/madebylegg/creative-strategy-call">Book a call</a>
 					</div>
-					<div class="service-item" data-aos="fade-up" data-aos-delay="200">
+					<div class="service-item hidden from-bottom">
 						<div class="service-icon">
 							<i class="fas fa-film"></i>
 						</div>
 						<h3>Motion Graphics</h3>
 						<p>High-quality animated visuals to engage your audience.</p>
-						<a href="#">Take a look</a>
-						<a href="#">Book a call</a>
+						<a href="motion_graphics.html">Take a look</a>
+						<a href="https://calendly.com/madebylegg/creative-strategy-call">Book a call</a>
 					</div>
-					<div class="service-item" data-aos="fade-up" data-aos-delay="300">
+					<div class="service-item hidden from-bottom">
 						<div class="service-icon">
 							<i class="fas fa-video"></i>
 						</div>
 						<h3>Video Editing</h3>
 						<p>Professional video edits for commercials and social media.</p>
-						<a href="#">Take a look</a>
-						<a href="#">Book a call</a>
+						<a href="video_editing.html">Take a look</a>
+						<a href="https://calendly.com/madebylegg/creative-strategy-call">Book a call</a>
 					</div>
-					<div class="service-item" data-aos="fade-up" data-aos-delay="400">
+					<div class="service-item hidden from-bottom">
 						<div class="service-icon">
 							<i class="fas fa-code"></i>
 						</div>
 						<h3>Web Development</h3>
 						<p>Responsive and modern websites tailored to your needs.</p>
-						<a href="#">Take a look</a>
-						<a href="#">Book a call</a>
+						<a href="web_dev.html">Take a look</a>
+						<a href="https://calendly.com/madebylegg/creative-strategy-call">Book a call</a>
 					</div>
 				</div>
 			</section>
@@ -275,11 +268,11 @@
 			<div class="splitter splt-3 flip"></div>
 
 			<section class="testimonials">
-				<h2>What Did My Clients have to Say?</h2>
-				<div class="testimonial-carousel-wrapper">
+				<h2 class="hidden from-left">What Did My Clients have to Say?</h2>
+				<div class="testimonial-carousel-wrapper hidden from-left">
 					<div class="testimonial-carousel">
 						<div class="testimonial-items">
-							<div class="testimonial-item" data-aos="fade-up">
+							<div class="testimonial-item" class="hidden">
 								<img
 									src="assets/images/client.jpg"
 									alt="Client 1"
@@ -294,8 +287,8 @@
 							</div>
 							<div
 								class="testimonial-item"
-								data-aos="fade-up"
-								data-aos-delay="100"
+								class="hidden"
+								class-delay="100"
 							>
 								<img
 									src="assets/images/client.jpg"
@@ -311,8 +304,8 @@
 							</div>
 							<div
 								class="testimonial-item"
-								data-aos="fade-up"
-								data-aos-delay="200"
+								class="hidden"
+								class-delay="200"
 							>
 								<img
 									src="assets/images/client.jpg"
@@ -340,13 +333,12 @@
 
 			<!-- CONTACT -->
 			<section class="contact">
-				<h2>Let's Work Together</h2>
-				<p>
+				<h2 class="hidden from-right">Let's Work Together</h2>
+				<p class="hidden from-right">
 					Whether you're looking for a partnership, hiring talent, or exploring
 					new collaborations, let's connect and bring your vision to life.
 				</p>
-				<a class="btn-alt" href="#">Book a call</a>
-				<a class="btn-alt" href="#">Download My CV</a>
+				<div class="hidden from-bottom"><a class="" href="#">Book a call</a></div>
 			</section>
 
 			<!-- SECTION SPLITTER -->
@@ -406,11 +398,11 @@
 							<div class="service-widget footer-widget">
 								<div class="footer-title">Services</div>
 								<ul class="list">
-									<li><a href="#">Branding & Identity</a></li>
-									<li><a href="#">Illustration</a></li>
-									<li><a href="#">Motion Graphics</a></li>
-									<li><a href="#">Video Editing</a></li>
-									<li><a href="#">Web Development</a></li>
+									<li><a href="branding.html">Branding & Identity</a></li>
+									<li><a href="illustrations.html">Illustration</a></li>
+									<li><a href="motion_graphics.html">Motion Graphics</a></li>
+									<li><a href="video_editing.html">Video Editing</a></li>
+									<li><a href="web_dev.html">Web Development</a></li>
 								</ul>
 							</div>
 						</div>
@@ -443,8 +435,10 @@
 		</footer>
 
 		<!-- main-footer end -->
-		<div class="footer-bottom footer-bottom-2"></div>
-
+		<a href="#home">
+			<div class="footer-bottom footer-bottom-2">BACK TO THE TOP</div>
+		</a>
+	
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>

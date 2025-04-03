@@ -386,10 +386,10 @@ h2 {
 }
 
 .hero a {
-	font-size: 1.4rem;
-	padding: 1rem 2rem;
-	background-color: var(--primary-color);
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	font-size: 1.6rem;
+	padding: 2rem 2.5rem;
+	background-color: var(--darker-khaki-color);
+	box-shadow:  rgb(71, 69, 40, 1) 0px 8px 15px;
 	color: white;
 	width: fit-content;
 	display: inline-block;
@@ -401,6 +401,7 @@ h2 {
 	z-index: 1; /* Ensures text is on top by default */
 	font-weight: 800;
 	text-transform: uppercase;
+
 }
 
 /* Pseudo-element for the splatter effect */
@@ -429,8 +430,9 @@ h2 {
 
 /* Alternative Button */
 .hero a.btn-alt {
-	background-color: var(--darker-khaki-color); /* Different button background */
+	background-color:  rgba(71, 69, 40, 0.683); /* Different button background */
 	color: var(--secondary-color); /* Alternative text color */
+	border: 2px dashed var(--secondary-color); /* Different border style */
 }
 
 /* Alternative Button Splatter Effect */
@@ -440,6 +442,7 @@ h2 {
 
 .hero a.btn-alt:hover {
 	color: var(--dark-khaki-color) !important; /* Alternative hover text color */
+
 }
 
 .illustration-hero-content h1 {
@@ -471,20 +474,31 @@ h2 {
 	margin-top: var(--section-padding);
 }
 
+body > main > section.about > div > div > p:nth-child(9) {
+	margin-bottom: var(--section-padding-lg);
+}
+
 .about span {
 	display: inline; /* Ensures span stays inline */
+	color: var(--dark-khaki-color);
 }
 
 .about a {
-	font-size: 2.5rem;
-	letter-spacing: 1px;
-	padding: 1rem;
+	font-size: 1.6rem;
+	padding: 2rem 2.5rem;
 	background-color: var(--dark-khaki-color);
+	box-shadow: #35353533 0px 8px 24px;
 	color: white;
-	width: 200px;
-	margin: 0 auto;
+	width: fit-content;
+	display: inline-block;
+	text-align: center;
 	border-radius: 5px;
+	position: relative;
+	overflow: hidden; /* Ensures effect stays within button */
+	transition: color 0.3s ease-in-out;
 	z-index: 1; /* Ensures text is on top by default */
+	font-weight: 800;
+	text-transform: uppercase;
 }
 /*==========================================================================
   SERVICES SECTION
@@ -710,12 +724,6 @@ h2 {
 	padding-bottom: var(--section-padding-lg);
 }
 
-/* Services Section Container */
-.contact {
-	background-color: var(--dark-khaki-color);
-	color: var(--secondary-color);
-	text-align: center;
-}
 
 /* Section Heading */
 .contact h2 {
@@ -724,47 +732,18 @@ h2 {
 	padding-inline: 15px;
 }
 
-/* Grid Layout for Service Items */
-.contact-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 2rem;
-	padding: 0 2rem;
-}
-
-/* Card Style for Each Service Item */
-.contact-item {
-	background-color: var(--secondary-color);
-	color: var(--primary-color);
-	border-radius: 8px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	padding: 2rem;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Icon Styling for Service Cards */
-.contact-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-	color: var(--dark-khaki-color); /* Accent color for icons */
-}
-
-/* Optional: Headings & Paragraphs within Service Items */
-.contact-item h3 {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.contact-item p {
-	font-size: 1.8rem;
+.contact p {
 	line-height: 1.5;
+	margin-bottom: 1rem;
 }
 
 .contact a {
 	font-size: 1.6rem;
 	letter-spacing: 1px;
-	padding: 0.5rem 2rem;
-	background-color: var(--dark-khaki-color);
+	padding: 2rem 2.5rem;
+	background-color:  rgba(71, 69, 40, 0.144); /* Different button background */
+	color: var(--secondary-color); /* Alternative text color */
+	border: 2px dashed var(--secondary-color); /* Different border style */
 	color: white;
 	width: fit-content;
 	display: inline-block;
@@ -775,17 +754,19 @@ h2 {
 	transition: color 0.3s ease-in-out;
 	z-index: 1; /* Ensures text is on top by default */
 	margin: 10px;
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
 /* Pseudo-element for the splatter effect */
-.services a::before {
+.contact a::before {
 	content: "";
 	position: absolute;
 	left: 0%;
 	top: 0%;
 	width: 280%;
 	height: 280%;
-	background-color: var(--primary-color); /* Ensures visibility */
+	background-color: var(--secondary-color); /* Ensures visibility */
 	border-radius: 50%; /* Expands in a circular way */
 	transform: translate(-50%, -50%) scale(0);
 	transition: transform 0.4s ease-in-out;
@@ -798,7 +779,7 @@ h2 {
 }
 
 .contact a:hover {
-	color: var(--secondary-color) !important; /* Ensures text color changes */
+	color: var(--dark-khaki-color) !important; /* Ensures text color changes */
 }
 
 /*==========================================================================
@@ -912,6 +893,10 @@ ul {
 .footer-bottom-2 {
 	background: var(--primary-color);
 	padding: 25px 0;
+	font-weight: 800;
+	font-size: 1.6rem;
+	letter-spacing: 1rem;
+	color: hsl(0, 0%, 20%);
 }
 
 .footer-bottom .copyright,
@@ -950,9 +935,6 @@ ul {
 
 	text-decoration: none;
 }
-
-
-
 
 
 /*==========================================================================

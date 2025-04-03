@@ -1,0 +1,31 @@
+/*==========================================================================
+  ANIMATION STYLES
+==========================================================================*/
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  transition: all 1s ease;
+  will-change: transform, opacity;
+}
+
+  
+  .from-left {
+    transform: translateX(-50%);
+  }
+  
+  .from-right {
+    transform: translateX(50%);
+  }
+  
+  .from-bottom {
+    transform: translateY(50%);
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
+  }
+  

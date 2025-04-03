@@ -83,23 +83,42 @@ function callPhoneNumber(phoneNumber) {
   window.location.href = 'tel:' + phoneNumber;
 }
 
+window.addEventListener('scroll', () => {
+  console.log('Scroll Y:', window.scrollY);
+});
+
 
 // SMOOTH SCROLLING
 
 document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent default anchor behavior
-    
-    const offset = -200; // Adjust this value to scroll further up
-    const target = document.getElementById('about');
-    
-    if (target) {
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
+  e.preventDefault();
+
+  const offset = -50; // Scroll 200px above the section
+  const target = document.querySelector('section#about'); // scroll to section
+
+  if (target) {
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+});
+document.querySelector('a[href="#services"]').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const offset = -50; // Scroll 200px above the section
+  const target = document.querySelector('section#services'); // scroll to section
+
+  if (target) {
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+});
+
   
   
   // CAROUSEL
@@ -141,6 +160,20 @@ document.querySelector('a[href="#about"]').addEventListener('click', function(e)
     });
   });
   
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // 🔥 Stops watching once it's visible
+        }, index * 100);
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
   
+  document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
   
   
